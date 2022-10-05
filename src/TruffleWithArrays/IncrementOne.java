@@ -10,7 +10,7 @@ public class IncrementOne {
         int[] nums2 = { 6, 8, 9 };
         int[] nums3 = { 6, 9, 9 };
         int[] nums4 = { 9, 9, 9 };
-        int[] nums5 = { 6, 8, 2 };
+        int[] nums5 = { 9, 6, 9, 9 };
         int[] nums6 = { 6, 8, 2 };
     
         solution(nums1);
@@ -23,13 +23,7 @@ public class IncrementOne {
 
     private static void solution(int[] nums) {
         int n = nums.length - 1;
-        if (nums[nums.length - 1] < 9) {
-            nums[n]++;
-            System.out.println(Arrays.toString(nums));
-            return;
-        }
-        else {
-            for (int i = n; i >= 0; i--) {
+        for (int i = n; i >= 0; i--) {
                 if (nums[i] == 9) {
                     nums[i] = 0;
                 } else {
@@ -40,8 +34,6 @@ public class IncrementOne {
             if (nums[0] != 0) {
                 System.out.println(Arrays.toString(nums));
             }
-            
-        }
         if (nums[0] == 0) {
             List<Integer> list11 = Arrays.stream(nums).boxed().collect(Collectors.toList());
             list11.add(0, 1);
