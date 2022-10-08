@@ -5,7 +5,7 @@ public class MultiplyIntegers {
         int[] nums1 = { 5, 2, 8, 6};
         int[] nums2 = { 3, 5, 3};
 
-        
+        int[] ans = new int[5];
 
     }
 }
