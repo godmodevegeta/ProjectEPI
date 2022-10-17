@@ -11,9 +11,20 @@ public class DeleteDuplicatesFromSorted {
     }
 
     private static void solution2(int[] nums) {
-        for(int i = 0, j = i; i < nums.length && j < nums.length; i++) {
-            
+        for(int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) nums[j] = 0;
+            }
         }
+    
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != 0) nums[i++] = nums[j];
+        }
+        for (; i < nums.length; i++) {
+            nums[i] = 0;
+        }
+        System.out.println(Arrays.toString(nums));    
     }
 
     private static void solution1(int[] nums) {
