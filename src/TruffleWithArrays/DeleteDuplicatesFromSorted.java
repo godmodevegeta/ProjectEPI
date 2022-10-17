@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class DeleteDuplicatesFromSorted {
     public static void main(String[] args) {
         int[] nums = { 2, 3, 4, 4, 5, 5, 5, 7, 7, 7, 7, 8, 9, 9, 9 };
-        solution1(nums);    
+        // solution1(nums);    
         solution2(nums);
     }
 
